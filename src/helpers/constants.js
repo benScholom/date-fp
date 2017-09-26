@@ -1,3 +1,7 @@
+/**
+ * @description
+ * Time-related terminology and numerals
+ */
 /* eslint max-len:0 */
 export const MONTHS = [
   'January',

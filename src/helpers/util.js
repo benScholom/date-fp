@@ -1,6 +1,10 @@
+/**
+ * @description
+ * Utility functions necesary for components to work
+ */
 /* eslint no-self-compare: 0*/
 import curry from 'lodash.curry'
-import isValid from '../isValid'
+//import isValid from '../isValid'
 
 const ZEROS = '00000000'
 
@@ -9,7 +13,8 @@ export const firstN = curry((n, str) => str.substring(0, n))
 export const fill = curry((digits, n) => lastN(digits, ZEROS + n))
 
 export const find = curry((f, array) => {
-  const filtered = array.filter(isValid)
+  //entered in contact of isValid in filter() to avoid circular dependency in Bit
+  const filtered = array.filter(date => checkDate(date) && checkNaN(date.getTime()) === false)
 
   return filtered.length === 0 ? new Date('invalid') : new Date(filtered.reduce((memo, date) => f(memo, date)))
 })
