@@ -1,3 +1,12 @@
+/**
+ * @description
+ * Returns a string representation of a date on the specified format. Returns the string 'Invalid Date' if given an invalid date.
+ * @example
+ * const date = new Date('2015-01-02 03:04:05.123');
+ * D.format('YYYY-MM-DD HH:mm:ss', date); // '2015-01-02 03:04:05'
+ * D.format('DD/MM/YY', date); // '02/01/15'
+ * D.format('MMMM D YYYY', date); // 'January 2 2015' 
+ */
 //@flow
 import curry from 'lodash.curry'
 import {DATE_TOKENS, WEEKDAYS, MONTHS} from './helpers/constants'

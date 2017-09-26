@@ -1,3 +1,10 @@
+/**
+ * @description
+ * Returns a new date by parsing the datestring based on the given format.
+ * @example
+ * const date = D.parse('YYYY-MM-DD HH:mm:ss', '2015-01-01 12:13:14') // Thu Jan 01 2015 12:13:14 GMT+0000 (GMT)
+ * const date = D.parse('MMM Do, YYYY', 'January 1st, 2015') // Thu Jan 01 2015 00:00:00 GMT+0000 (GMT)
+ */
 //@flow weak
 import curry from 'lodash.curry'
 import {DATE_TOKENS, MONTHS} from './helpers/constants'
